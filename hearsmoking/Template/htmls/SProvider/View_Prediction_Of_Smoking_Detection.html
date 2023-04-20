@@ -1,0 +1,112 @@
+{% extends 'SProvider/Header.html' %}
+{% block researchblock %}
+
+
+<link rel="icon" href="images/icon.png" type="image/x-icon" />
+
+	<link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Righteous" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Fredoka+One" rel="stylesheet">
+
+
+
+		<style>
+			body {background-color:#000000;}
+			.container-fluid {padding:50px;}
+			.container{background-color:white;padding:50px;   }
+			#title{font-family: 'Fredoka One', cursive;
+}
+			.text-uppercase{
+			font-family: 'Righteous', cursive;
+
+			}
+			.tweettext{
+
+    border: 2px solid yellowgreen;
+    width: 1104px;
+    height: 442px;
+    overflow: scroll;
+    background-color:;
+}
+		.style1 {
+	color: #FF0000;
+	font-weight: bold;
+}
+.style12 {color: #FFFF00; font-weight: bold; }
+        </style>
+
+	<body>
+	<div class="container-fluid">
+		<div class="container">
+
+			<div class="row">
+				<div class="col-md-5">
+ 					<form role="form" method="POST" >
+						{% csrf_token %}
+						<fieldset>
+							<p class="text-uppercase pull-center style1">View Smoking Prediction Type Details  !!! </p>
+                            <hr>
+                            <div class="tweettext">
+                               <table border="5" bordercolor="#FF00FF">
+
+
+                                   <tr>
+
+                                       <td bgcolor="#FF0000"><div align="center" class="style12"><span class="style8 style6">CHASSIS_NO</span></div></td>
+<td bgcolor="#FF0000"><div align="center" class="style12"><span class="style8 style6">MODEL_YEAR</span></div></td>
+<td bgcolor="#FF0000"><div align="center" class="style12"><span class="style8 style6">USE_OF_VEHICLE</span></div></td>
+<td bgcolor="#FF0000"><div align="center" class="style12"><span class="style8 style6">MODEL</span></div></td>
+<td bgcolor="#FF0000"><div align="center" class="style12"><span class="style8 style6">MAKE</span></div></td>
+<td bgcolor="#FF0000"><div align="center" class="style12"><span class="style8 style6">gender</span></div></td>
+<td bgcolor="#FF0000"><div align="center" class="style12"><span class="style8 style6">age</span></div></td>
+<td bgcolor="#FF0000"><div align="center" class="style12"><span class="style8 style6">height_cm</span></div></td>
+<td bgcolor="#FF0000"><div align="center" class="style12"><span class="style8 style6">weight_kg</span></div></td>
+<td bgcolor="#FF0000"><div align="center" class="style12"><span class="style8 style6">waist_cm</span></div></td>
+<td bgcolor="#FF0000"><div align="center" class="style12"><span class="style8 style6">eyesight_left</span></div></td>
+<td bgcolor="#FF0000"><div align="center" class="style12"><span class="style8 style6">eyesight_right</span></div></td>
+<td bgcolor="#FF0000"><div align="center" class="style12"><span class="style8 style6">hearing_left</span></div></td>
+<td bgcolor="#FF0000"><div align="center" class="style12"><span class="style8 style6">hearing_right</span></div></td>
+<td bgcolor="#FF0000"><div align="center" class="style12"><span class="style8 style6">Prediction</span></div></td>
+
+                      </tr>
+                            {% for object in list_objects %}
+                      <tr>
+
+                           <td bgcolor="#FFFFFF" style="color:red; font-size:20px; font-family:fantasy" >{{object.CHASSIS_NO}}</td>
+ <td bgcolor="#FFFFFF" style="color:red; font-size:20px; font-family:fantasy" >{{object.MODEL_YEAR}}</td>
+ <td bgcolor="#FFFFFF" style="color:red; font-size:20px; font-family:fantasy" >{{object.USE_OF_VEHICLE}}</td>
+ <td bgcolor="#FFFFFF" style="color:red; font-size:20px; font-family:fantasy" >{{object.MODEL}}</td>
+ <td bgcolor="#FFFFFF" style="color:red; font-size:20px; font-family:fantasy" >{{object.MAKE}}</td>
+ <td bgcolor="#FFFFFF" style="color:red; font-size:20px; font-family:fantasy" >{{object.gender}}</td>
+ <td bgcolor="#FFFFFF" style="color:red; font-size:20px; font-family:fantasy" >{{object.age}}</td>
+ <td bgcolor="#FFFFFF" style="color:red; font-size:20px; font-family:fantasy" >{{object.height_cm}}</td>
+ <td bgcolor="#FFFFFF" style="color:red; font-size:20px; font-family:fantasy" >{{object.weight_kg}}</td>
+ <td bgcolor="#FFFFFF" style="color:red; font-size:20px; font-family:fantasy" >{{object.waist_cm}}</td>
+ <td bgcolor="#FFFFFF" style="color:red; font-size:20px; font-family:fantasy" >{{object.eyesight_left}}</td>
+ <td bgcolor="#FFFFFF" style="color:red; font-size:20px; font-family:fantasy" >{{object.eyesight_right}}</td>
+ <td bgcolor="#FFFFFF" style="color:red; font-size:20px; font-family:fantasy" >{{object.hearing_left}}</td>
+ <td bgcolor="#FFFFFF" style="color:red; font-size:20px; font-family:fantasy" >{{object.hearing_right}}</td>
+ <td bgcolor="#FFFFFF" style="color:red; font-size:20px; font-family:fantasy" >{{object.Prediction}}</td>
+
+                        </tr>
+
+                                        {% endfor %}
+                      </table>
+
+                            </div>
+
+
+
+
+						</fieldset>
+					</form>
+				</div>
+
+				<div class="col-md-2">
+					<!-------null------>
+				</div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+    <tr>

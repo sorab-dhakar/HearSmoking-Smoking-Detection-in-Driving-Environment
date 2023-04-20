@@ -1,0 +1,33 @@
+HearSmoking Smoking Detection in Driving Environment via Acoustic Sensing on Smartphones
+
+IEEE Transactions on Mobile Computing,Volume:21,Issue:8,Issue Date:01.August.2022
+
+Smoking detection,neural networks,acoustic sensing,mobile computing.
+
+
+HearSmoking
+
+
+hearsmoking
+
+
+smoking_detection
+
+
+
+CHASSIS_NO
+MODEL_YEAR
+USE_OF_VEHICLE
+MODEL
+MAKE
+gender
+age
+height_cm
+weight_kg
+waist_cm
+eyesight_left
+eyesight_right
+hearing_left
+hearing_right
+Prediction
+

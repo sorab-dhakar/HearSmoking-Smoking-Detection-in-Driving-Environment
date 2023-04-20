@@ -1,0 +1,161 @@
+{% extends 'RUser/Header.html' %}
+{% block userblock %}
+
+
+<link rel="icon" href="images/icon.png" type="image/x-icon" />
+
+	<link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Righteous" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Fredoka+One" rel="stylesheet">
+
+
+
+		<style>
+			body {background-color:#000000;}
+			.container-fluid {padding:50px;}
+			.container{background-color:white;padding:50px;   }
+			#title{font-family: 'Fredoka One', cursive;
+}
+			.text-uppercase{
+			font-family: 'Righteous', cursive;
+
+			}
+			.tweettext{
+
+    border: 2px solid yellowgreen;
+    width: 904px;
+    height: 202px;
+    overflow: scroll;
+    background-color:;
+}
+		.style1 {
+	color: #FF0000;
+	font-weight: bold;
+}
+.style4 {color: #FFFF00; font-weight: bold; }
+.style6 {
+	font-size: 24px;
+	color: #FFFF00;
+	font-weight: bold;
+}
+        .style7 {color: #FFFF00}
+        </style>
+
+	<body>
+	<div class="container-fluid">
+		<div class="container">
+
+			<div class="row">
+				<div class="col-md-5">
+
+                   <form role="form" method="POST" >
+						{% csrf_token %}
+						<fieldset>
+							<p class="text-uppercase pull-center style1">PREDICTION OF SMOKING DETECTION!!! </p>
+                            <hr>
+
+                                {% csrf_token %}
+                                <table width="1122" align="center">
+                                  <tr>
+                                    <td height="44" bgcolor="#FF0000"><div align="center" class="style4">Enter CHASSIS_NO</div></td>
+                                    <td><input type="text" name="CHASSIS_NO"></td>
+                                    <td bgcolor="#FF0000"><div align="center" class="style7">Enter MODEL_YEAR</div></td>
+                                    <td><input type="text" name="MODEL_YEAR"></td>
+                                  </tr>
+                                  <tr>
+                                    <td height="44" bgcolor="#FF0000"><div align="center" class="style4">Enter USE_OF_VEHICLE</div></td>
+                                    <td><input type="text" name="USE_OF_VEHICLE"></td>
+                                    <td bgcolor="#FF0000"><div align="center" class="style7">Enter MODEL</div></td>
+                                    <td><input type="text" name="MODEL"></td>
+                                  </tr>
+                                  <tr>
+                                    <td height="44" bgcolor="#FF0000"><div align="center" class="style4">Enter MAKE</div></td>
+                                    <td><input type="text" name="MAKE"></td>
+                                    <td bgcolor="#FF0000"><div align="center" class="style7">Select  Gender</div></td>
+                                    <td><select name="gender">
+                                      <option>---Select---</option>
+                                      <option>M</option>
+                                      <option>F</option>
+                                    </select>                                    </td>
+                                  </tr>
+                                  <tr>
+                                    <td height="44" bgcolor="#FF0000"><div align="center" class="style4">Enter Age</div></td>
+                                    <td><input type="text" name="age"></td>
+                                    <td bgcolor="#FF0000"><div align="center" class="style7">Enter height_cm</div></td>
+                                    <td><input type="text" name="height_cm"></td>
+                                  </tr>
+                                  <tr>
+                                    <td height="44" bgcolor="#FF0000"><div align="center" class="style4">
+                                      <div align="center">Enter weight_kg</div>
+                                    </div></td>
+                                    <td><input type="text" name="weight_kg"></td>
+                                    <td bgcolor="#FF0000"><div align="center" class="style7">Enter waist_cm</div></td>
+                                    <td><input type="text" name="waist_cm"></td>
+                                  </tr>
+                                  <tr>
+                                    <td height="44" bgcolor="#FF0000"><div align="center" class="style4">
+                                      <div align="center">Enter eyesight_left</div>
+                                    </div></td>
+                                    <td><input type="text" name="eyesight_left"></td>
+                                    <td bgcolor="#FF0000"><div align="center" class="style7">Enter eyesight_right</div></td>
+                                    <td><input type="text" name="eyesight_right"></td>
+                                  </tr>
+                                  <tr>
+                                    <td height="44" bgcolor="#FF0000"><div align="center" class="style4">Select  hearing_left</div></td>
+                                    <td><select name="hearing_left">
+                                      <option>---Select---</option>
+                                      <option>0</option>
+                                      <option>1</option>
+                                                                        </select></td>
+                                    <td bgcolor="#FF0000"><div align="center" class="style7">Select hearing_right</div></td>
+                                    <td><select name="hearing_right">
+                                      <option>---Select---</option>
+                                      <option>0</option>
+                                      <option>1</option>
+                                                                        </select></td>
+                                  </tr>
+                                  <tr>
+                                    <td width="287" height="44" bgcolor="#FFFFFF">&nbsp;</td>
+                                    <td width="269">&nbsp;</td>
+                                    <td width="269"><input name="submit" type="submit" class="style1" value="Predict"></td>
+                                    <td width="269">&nbsp;</td>
+                                  </tr>
+                                </table>
+					 </fieldset>
+				  </form>
+
+
+ 					<form role="form" method="POST" >
+						{% csrf_token %}
+						<fieldset>
+
+                            <hr>
+                            <div>
+                              <table width="693" height="67" border="0" align="center" >
+                                    <tr><td width="475" bgcolor="#FF0000"><div align="center"><span class="style6">Prediction Of Smoking Detection </span> :: </div></td>
+
+
+
+                                      <td width="208" bgcolor="#FFFFFF" style="color:red; font-size:20px; font-family:fantasy" ><div align="center"><strong>{{objs}}</strong></div></td>
+                                    </tr>
+                      </table>
+
+
+
+                            </div>
+
+
+
+
+						</fieldset>
+					</form>
+				</div>
+
+				<div class="col-md-2">
+					<!-------null------>
+				</div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+    <tr>
